@@ -4,16 +4,22 @@
 
 ### Things I built
 
-| | |
-|---|---|
-| [**mission-control**](https://github.com/abhinxx/mission-control) | A PM command center run entirely by Claude Code. Pulls meetings, Slack and Jira, pulls out my tasks, renders a dashboard. Local, no SaaS. |
-| [**bmw-backseat**](https://github.com/abhinxx/bmw-backseat) | Product intelligence console for BMW product managers. 3rd place, European Hackathon League finals (BMW track). |
-| [**hermes-agent-hardening**](https://github.com/abhinxx/hermes-agent-hardening) | Hooks that stop an AI agent from acting when you only asked a question. 100% precision, zero false blocks. |
-| [**sentinel**](https://github.com/abhinxx/sentinel) | Catches a voice agent lying in under two seconds. |
-| [**pawmatch**](https://github.com/abhinxx/pawmatch) | Bumble for pet adoption, with agents that book the real meetup. 3rd place, Dogathon SF. |
-| [**saathi-robot**](https://github.com/abhinxx/saathi-robot) | A force-limited robot hand that holds yours in the dark and talks offline in Nepali. Himalaya Robotics Hack. |
-| [**poof**](https://github.com/abhinxx/poof) | Fully private send and receive over Ethereum, using Starknet. |
-| [**hyperliquid-dca**](https://github.com/abhinxx/hyperliquid-dca) | RSI and dip-buying DCA bot on Hyperliquid. |
+- [**mission-control**](https://github.com/abhinxx/mission-control)  
+  A PM command center run entirely by Claude Code. Pulls meetings, Slack and Jira, pulls out my tasks, renders a dashboard. Local, no SaaS.
+- [**bmw-backseat**](https://github.com/abhinxx/bmw-backseat)  
+  Product intelligence console for BMW product managers. 3rd place, European Hackathon League finals (BMW track).
+- [**hermes-agent-hardening**](https://github.com/abhinxx/hermes-agent-hardening)  
+  Hooks that stop an AI agent from acting when you only asked a question. 100% precision, zero false blocks.
+- [**sentinel**](https://github.com/abhinxx/sentinel)  
+  Catches a voice agent lying in under two seconds.
+- [**pawmatch**](https://github.com/abhinxx/pawmatch)  
+  Bumble for pet adoption, with agents that book the real meetup. 3rd place, Dogathon SF.
+- [**saathi-robot**](https://github.com/abhinxx/saathi-robot)  
+  A force-limited robot hand that holds yours in the dark and talks offline in Nepali. Himalaya Robotics Hack.
+- [**poof**](https://github.com/abhinxx/poof)  
+  Fully private send and receive over Ethereum, using Starknet.
+- [**hyperliquid-dca**](https://github.com/abhinxx/hyperliquid-dca)  
+  RSI and dip-buying DCA bot on Hyperliquid.
 
 Most of my work lives in private repos or inside other companies' products. Want the full story? [Book 30 minutes](https://cal.com/pmabhi/30min).
 
