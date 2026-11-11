@@ -1,0 +1,30 @@
+name: refresh card
+
+on:
+  schedule:
+    - cron: "17 4 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [build.py, portrait.txt, portrait.shade]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Render card.svg
+        run: python3 build.py
+        env:
+          # optional PROFILE_TOKEN secret (PAT) if you ever want more than public data
+          GITHUB_TOKEN: ${{ secrets.PROFILE_TOKEN || github.token }}
+      - name: Commit if changed
+        run: |
+          git diff --quiet card.svg && exit 0
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: refresh card" card.svg
+          git push
