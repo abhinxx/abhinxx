@@ -1,26 +1,15 @@
 <p align="center">
-  <a href="https://pmabhi.com"><img src="./card.svg" width="100%" alt="abhi@munich running neofetch: Product brain, engineer hands. TUM x HEC Paris. Shipped 6+ concurrent blockchain integrations at Ledger, a Canton mainnet MVP in under a month ($2M+ reward), and 80K+ registrations at Ampverse. Hackathons: 1st Global Hermes AI Hackathon, winner AI Paris Hack, 2nd ETHGlobal Lisbon."></a>
+  <a href="https://pmabhi.com"><img src="./card.svg" width="100%" alt="Player 1: Abhi, class lifemaxxer. Life is a game. 2026 side quests: motorbiked solo over the Himalayas, rebuilt a house in the redwoods after a wildfire, farmed in the California hills, hunted alligators in Louisiana (caught 0), built an FPV drone, painted for an SF gallery, met Macron at VivaTech. Trophies: 1st Hermes Agent Hackathon Paris, winner AI Paris Hack, 2nd ETHGlobal Lisbon. Current quest: robotics in Munich."></a>
 </p>
 
-### Things I built
+> Life is like a game, and we are all in. While we are at it, we shall play the most magnificent game ever.
 
-- [**mission-control**](https://github.com/abhinxx/mission-control)  
-  A PM command center run entirely by Claude Code. Pulls meetings, Slack and Jira, pulls out my tasks, renders a dashboard. Local, no SaaS.
-- [**bmw-backseat**](https://github.com/abhinxx/bmw-backseat)  
-  Product intelligence console for BMW product managers. 3rd place, European Hackathon League finals (BMW track).
-- [**hermes-agent-hardening**](https://github.com/abhinxx/hermes-agent-hardening)  
-  Hooks that stop an AI agent from acting when you only asked a question. 100% precision, zero false blocks.
-- [**sentinel**](https://github.com/abhinxx/sentinel)  
-  Catches a voice agent lying in under two seconds.
-- [**pawmatch**](https://github.com/abhinxx/pawmatch)  
-  Bumble for pet adoption, with agents that book the real meetup. 3rd place, Dogathon SF.
-- [**saathi-robot**](https://github.com/abhinxx/saathi-robot)  
-  A force-limited robot hand that holds yours in the dark and talks offline in Nepali. Himalaya Robotics Hack.
-- [**poof**](https://github.com/abhinxx/poof)  
-  Fully private send and receive over Ethereum, using Starknet.
-- [**hyperliquid-dca**](https://github.com/abhinxx/hyperliquid-dca)  
-  RSI and dip-buying DCA bot on Hyperliquid.
+**Stuff I built, mostly at hackathons:**
 
-Most of my work lives in private repos or inside other companies' products. Want the full story? [Book 30 minutes](https://cal.com/pmabhi/30min).
+- [**pawmatch**](https://github.com/abhinxx/pawmatch): Bumble for shelter dogs, with agents that book the real meetup. 3rd at Dogathon SF, on my second day in the city.
+- [**saathi-robot**](https://github.com/abhinxx/saathi-robot): a robot hand whose only job is to hold yours in the dark, and talk to you in Nepali.
+- [**bmw-backseat**](https://github.com/abhinxx/bmw-backseat): a room full of AI customers for BMW product managers. 3rd at the European Hackathon League finals.
+- [**sentinel**](https://github.com/abhinxx/sentinel): catches a voice agent lying in under two seconds.
+- [**mission-control**](https://github.com/abhinxx/mission-control): my whole PM job on one screen, run by Claude Code.
 
-<sub>The card above is an SVG that rebuilds itself every morning: <code>build.py</code> pulls live stats from the GitHub API, the portrait is my photo turned into shaded ASCII by <code>portrait.py</code>.</sub>
+Say hi at [pmabhi.com](https://pmabhi.com) or [grab 30 minutes](https://cal.com/pmabhi/30min).

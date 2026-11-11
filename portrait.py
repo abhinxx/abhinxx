@@ -18,7 +18,9 @@ RAMP = " .,:;irsXA253hMHGS#9B&@"
 BOX = (300, 50, 960, 1010)    # crop: head and shoulders, keeps the site text out
 BG_CUTOFF = 236               # brighter than this and flat = background
 CELL_ASPECT = 2.0             # monospace cell is ~2x taller than wide
-GAMMA = 1.35                  # >1 keeps texture in the bright hair
+GAMMA = 1.0
+LOCAL = 0.9                   # 0 = plain photo tones, 1 = only local contrast
+BLUR = 40                      # px radius that counts as "local"
 
 
 def main(path, cols=60):
@@ -31,16 +33,26 @@ def main(path, cols=60):
     size = (cols, rows)
     raw = img.resize(size, Image.BOX)                  # true tone, for the mask
     edges = edges.resize(size, Image.BOX)
-    detail = img.filter(ImageFilter.UnsharpMask(radius=3, percent=160, threshold=2))
-    detail = ImageOps.autocontrast(detail, cutoff=1).resize(size, Image.LANCZOS)
+    base = ImageOps.autocontrast(img, cutoff=1)
+    detail = base.filter(ImageFilter.UnsharpMask(radius=3, percent=160, threshold=2))
+    detail = detail.resize(size, Image.LANCZOS)
+    # the face is darker than the hair and suit around it; a local high-pass
+    # lifts it to mid-tones so eyes, brows and beard read as features
+    blur = base.filter(ImageFilter.GaussianBlur(BLUR)).resize(size, Image.BOX)
+    tone = lambda c: (1 - LOCAL) * detail.getpixel(c) + LOCAL * (detail.getpixel(c) - blur.getpixel(c) + 128)
+    fg = [(x, y) for y in range(rows) for x in range(cols)
+          if not (raw.getpixel((x, y)) > BG_CUTOFF and edges.getpixel((x, y)) < 10)]
+    # equalise over the subject only: the face's midtones get the whole ramp
+    order = sorted(fg, key=tone)
+    rank = {c: i / max(1, len(order) - 1) for i, c in enumerate(order)}
     chars, shades = [], []
     for y in range(rows):
         c_line, s_line = "", ""
         for x in range(cols):
-            lum = (detail.getpixel((x, y)) / 255) ** GAMMA
-            if raw.getpixel((x, y)) > BG_CUTOFF and edges.getpixel((x, y)) < 10:
+            if (x, y) not in rank:
                 c_line, s_line = c_line + " ", s_line + "0"
                 continue
+            lum = rank[(x, y)] ** GAMMA
             c_line += RAMP[max(1, round(lum * (len(RAMP) - 1)))]
             s_line += "%x" % min(15, round(lum * 15))
         chars.append(c_line)
